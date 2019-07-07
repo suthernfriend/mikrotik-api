@@ -2,7 +2,7 @@
 	"name": "suthernfriend/mikrotik-api",
 	"description": "Comfortable Wrapper Around RouterOS Library for accessing MikroTik routers via their API",
 	"type": "library",
-	"license": "Apache2",
+	"license": "Apache-2.0",
 	"authors": [
 		{
 			"name": "suthernfriend",

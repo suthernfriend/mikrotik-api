@@ -53,7 +53,7 @@ services:
 
 ```
 
-# Example use:    
+## Example use:    
 
 ```php
 <?php
