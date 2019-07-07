@@ -1,0 +1,22 @@
+{
+	"name": "suthernfriend/mikrotik-api",
+	"description": "Comfortable Wrapper Around RouterOS Library for accessing MikroTik routers via their API",
+	"type": "library",
+	"license": "Apache2",
+	"authors": [
+		{
+			"name": "suthernfriend",
+			"email": "public@janpeterkoenig.com"
+		}
+	],
+	"minimum-stability": "beta",
+	"require": {
+		"php": "^7.3",
+		"pear2/net_routeros": "^1.0@beta",
+		"darsyn/ip": "^4.0",
+		"blake-gardner/mac-address": "^2.1",
+		"ext-json": "*",
+		"psr/log": "^1.1",
+		"ext-mbstring": "*"
+	}
+}
