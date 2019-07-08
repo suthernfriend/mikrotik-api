@@ -76,7 +76,7 @@ echo "$obj\n";
  * Will print p.e. 
  * [
  *   { id: *27, address: 10.1.1.1/24, network: 10.1.1.0, interface: eth1, actualInterface: eth1, dynamic: false, invalid: false, disabled: false },
- *   { id: *2A, address: 192.168.1.1/24, network: 192.168.1.1, interface: trunk, actualInterface: trunk, dynamic: false, invalid: false, disabled: false }
+ *   { id: *2A, address: 192.168.1.1/24, network: 192.168.1.0, interface: trunk, actualInterface: trunk, dynamic: false, invalid: false, disabled: false }
  * ]
  */
 
