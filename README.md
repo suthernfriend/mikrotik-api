@@ -108,6 +108,8 @@ $connectionManager->createRequest()->ip->dhcpServer->lease->makeStatic($lease);
 
 You can use any MikroTik command by converting the command in the terminal interface to camelCase
 
+**All commands (and even new commands that may appear in a future version of RouterOS) are supported!**
+
 ### Examples:
 
 - `/system reboot` to `$connectionManager->createRequest()->system->reboot();`
