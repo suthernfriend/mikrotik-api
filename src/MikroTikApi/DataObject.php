@@ -65,7 +65,7 @@ class DataObject implements ArrayAccess, IteratorAggregate, Countable, JsonSeria
 	 * @return bool
 	 */
 	public function hasProperty($name): bool {
-		return isset($this->properties[$name]);
+		return array_key_exists($name, $this->properties);
 	}
 
 	/**
