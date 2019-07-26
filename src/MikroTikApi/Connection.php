@@ -3,6 +3,7 @@
 
 namespace MikroTikApi;
 
+use MikroTikApi\RouterOS\Client;
 use PEAR2\Net\RouterOS as RouterOS;
 use PEAR2\Net\RouterOS\Exception;
 use Psr\Log\LoggerInterface;
@@ -293,7 +294,7 @@ class Connection {
 	private function ensureOpen() {
 		if ($this->client === null) {
 			try {
-				$this->client = new RouterOS\Client($this->host, $this->user, $this->password, $this->port);
+				$this->client = new Client($this->host, $this->user, $this->password, $this->port);
 				$this->logger->info("Connected to " . $this->host . " with user " . $this->user);
 			} catch (Exception $e) {
 				throw new MikroTikConnectionException("Cannot open RouterOS connection: " . $e->getMessage(), 0, $e);
