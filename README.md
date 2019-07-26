@@ -76,7 +76,7 @@ echo "$obj\n";
  * Will print p.e. 
  * [
  *   { id: *27, address: 10.1.1.1/24, network: 10.1.1.0, interface: eth1, actualInterface: eth1, dynamic: false, invalid: false, disabled: false },
- *   { id: *2A, address: 10.1.1.1/24, network: 192.168.1.1, interface: trunk, actualInterface: trunk, dynamic: false, invalid: false, disabled: false }
+ *   { id: *2A, address: 192.168.1.1/24, network: 192.168.1.0, interface: trunk, actualInterface: trunk, dynamic: false, invalid: false, disabled: false }
  * ]
  */
 
@@ -108,11 +108,13 @@ $connectionManager->createRequest()->ip->dhcpServer->lease->makeStatic($lease);
 
 You can use any MikroTik command by converting the command in the terminal interface to camelCase
 
+**All commands (and even new commands that may appear in a future version of RouterOS) are supported!**
+
 ### Examples:
 
 - `/system reboot` to `$connectionManager->createRequest()->system->reboot();`
 - `/caps-man provisioning print` to `$connectionManager->createRequest()->capsMan->provisioning->print();`
-- `/routing ospf-v3 virtual-link` to `$connectionManager->createRequest()->routing->ospfV3->virtualLink->print();`
+- `/routing ospf-v3 virtual-link remove` to `$connectionManager->createRequest()->routing->ospfV3->virtualLink->remove();`
 ### The same is valid for properties
 
 ```php
@@ -129,6 +131,10 @@ echo $prov->commonNameRegexp . "\n";
 $prov = $connectionManager->createRequest()->capsMan->provisioning->print(\MikroTikApi\DataObject::create(["comment" => "first-config"]))->getOne();
 $prov->action = "create-dynamic-enabled";
 ```
+
+### Types
+
+IP-Addresse, Mac addresses, Durations, Numbers and MikroTik Ids are converted to special instances of classes which have additional features. See the Types folder.
 
 ## Bugs
 

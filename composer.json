@@ -15,7 +15,7 @@
 		}
 	},
 	"minimum-stability": "beta",
-	"version": "1.1beta",
+	"version": "1.0.2beta",
 	"require": {
 		"php": "^7.3",
 		"pear2/net_routeros": "^1.0@beta",
